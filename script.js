@@ -76,11 +76,11 @@ function ScoreUpdate(ScorePlayer , ScoreComputer , Point){
 // main
 
 NumberOfRounds = parseInt(prompt("Enter the number of rounds : "));
+let ScorePlayer = 0 , ScoreComputer = 0;
 
 for (i=0 ; i<NumberOfRounds ; i++){
     let PlayerChoice = GetPlayerChoice();
     let ComputerChoice = GetComputerChoice();
-    let ScorePlayer , ScoreComputer = 0;
 
     let Point = Points(PlayerChoice , ComputerChoice);
     [ScorePlayer , ScoreComputer] = ScoreUpdate(ScorePlayer , ScoreComputer , Point);
