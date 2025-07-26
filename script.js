@@ -80,4 +80,14 @@ NumberOfRounds = parseInt(prompt("Enter the number of rounds : "));
 for (i=0 ; i<NumberOfRounds ; i++){
     let PlayerChoice = GetPlayerChoice();
     let ComputerChoice = GetComputerChoice();
+    let ScorePlayer , ScoreComputer = 0;
+
+    let Point = Points(PlayerChoice , ComputerChoice);
+    [ScorePlayer , ScoreComputer] = ScoreUpdate(ScorePlayer , ScoreComputer , Point);
+
+
 }
+
+
+console.log(`Final Score of player is ${ScorePlayer}`);
+console.log(`Final score of compouter is ${ScoreComputer}`);
